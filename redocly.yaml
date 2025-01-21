@@ -1,4 +1,4 @@
-app_name: "My Awesome App"
+app_name: "webhooks-test"
 version: "1.0.0"
 settings:
   theme: "dark"
