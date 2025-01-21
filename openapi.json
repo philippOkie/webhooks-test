@@ -7,17 +7,18 @@
   },
   "servers": [
     {
-      "url": "https://api.example.com/v1",
+      "url": "https://api.yourdomain.com/v1",
       "description": "Production server"
     },
     {
-      "url": "https://sandbox.api.example.com/v1",
+      "url": "https://sandbox-api.yourdomain.com/v1",
       "description": "Sandbox server"
     }
   ],
   "paths": {
     "/users": {
       "get": {
+        "operationId": "getUsers",
         "summary": "Retrieve a list of users",
         "description": "Returns a list of users from the system.",
         "responses": {
@@ -53,7 +54,9 @@
     },
     "/users/{id}": {
       "get": {
+        "operationId": "getUserById",
         "summary": "Retrieve a specific user",
+        "description": "Fetch details of a user by their unique ID.",
         "parameters": [
           {
             "name": "id",
@@ -94,6 +97,20 @@
             "description": "User not found."
           }
         }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   }
