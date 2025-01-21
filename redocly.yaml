@@ -1,0 +1,6 @@
+app_name: "My Awesome App"
+version: "1.0.0"
+settings:
+  theme: "dark"
+  language: "en"
+  notifications_enabled: true
