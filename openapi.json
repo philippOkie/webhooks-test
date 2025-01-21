@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "test",
+    "title": "another-test",
     "description": "This is a sample API to demonstrate OpenAPI JSON structure.",
     "version": "1.0.0"
   },
